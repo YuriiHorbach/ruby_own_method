@@ -7,6 +7,14 @@ class String
       yield(word)
   end
   
+  def reverse_analogue
+      arr = self.chars.reduce{|a, b| b + a }
+      yield(arr)
+  end
 end
 
 "qwerty".my_reverse{|word| puts word}
+"string".reverse_analogue{|word| puts word}
+
+
+
